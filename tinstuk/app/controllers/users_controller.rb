@@ -3,16 +3,16 @@ class UsersController < ApplicationController
   before_action :set_user, only:[:edit, :profile, :update, :destroy, :get_email]
 
   def index
-        if params[:id]
-          @users = User.where('id < ?', params[:id]).limit(2)
-        else
-          @users = User.all.limit(2)
-        end
+    if params[:id]
+      @users = User.gender(current_user).where('id < ?', params[:id]).not_me(current_user).limit(10) - current_user.matches(current_user)
+    else
+      @users = User.gender(current_user).not_me(current_user).limit(10) - current_user.matches(current_user)
+    end
 
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    respond_to do |format|
+      format.html
+      format.js
+    end
       
   end
 
