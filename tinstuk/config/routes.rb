@@ -15,5 +15,8 @@ Rails.application.routes.draw do
   post    'create_friendships' => 'friendships#create'
   delete  'destroy_friendships' => 'friendships#destroy'
 
+  get 'matches/get_email' => "users#get_email"
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
