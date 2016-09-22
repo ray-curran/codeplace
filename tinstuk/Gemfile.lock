@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ifad/data-confirm-modal.git
+  revision: 3ad63b3f71762691d853f29a14664518f6f2d11a
+  specs:
+    data-confirm-modal (1.2.0)
+      railties (>= 3.0)
+
+GIT
   remote: https://github.com/thoughtbot/paperclip
   revision: 523bd46c768226893f23889079a7aa9c73b57d68
   ref: 523bd46c768226893f23889079a7aa9c73b57d68
@@ -63,6 +70,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.15.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -216,7 +224,9 @@ DEPENDENCIES
   aws-sdk (< 2.0)
   bootstrap-sass
   byebug
+  cancancan
   coffee-rails (~> 4.2)
+  data-confirm-modal!
   dotenv-rails
   font-awesome-sass
   jbuilder (~> 2.5)
