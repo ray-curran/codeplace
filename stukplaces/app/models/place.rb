@@ -17,4 +17,13 @@ class Place < ApplicationRecord
     0
   end
 
+  def self.search(search)
+    if search 
+      where(['name LIKE ? or address LIKE ?', "#{search}", "#{search}" ])
+    else
+      all
+    end
+
+  end
+
 end
