@@ -6,4 +6,6 @@ class Place < ApplicationRecord
   validates_presence_of :user_id 
 
   belongs_to :user
+  geocoded_by :address 
+  after_validation :geocode 
 end
