@@ -17,6 +17,10 @@ class ConnectionsController < ApplicationController
     end
   end
 
+  def omniauth_failure 
+    redirect_to dashboard_path, notice: 'Something went wrong!'
+  end
+
   private 
   
   def auth_hash
@@ -27,5 +31,5 @@ class ConnectionsController < ApplicationController
     @connection = Connection.find(params[:id])
   end
   
-  
+
 end
