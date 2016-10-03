@@ -19,6 +19,8 @@
 
 class Reward < ApplicationRecord
   belongs_to :project
+  has_many   :pledges
+
 
   validates :description, :value, :estimated_delivery, presence: true
   validates :value, numericality: { greater_than_or_equal_to: 0 }

@@ -25,4 +25,7 @@ class Project < ApplicationRecord
 
   validates :name, :short_description, :description, :image_url, :expiration_date, :goal, presence: true
 
+  def pledges
+    rewards.flat_map(&:pledges)
+  end
 end
