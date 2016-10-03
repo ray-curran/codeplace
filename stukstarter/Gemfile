@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'date_validator'
 gem 'simple_form'
 gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'devise'
